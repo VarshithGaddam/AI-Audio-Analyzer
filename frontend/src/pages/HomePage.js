@@ -251,8 +251,11 @@ const HomePage = ({ onGetStarted }) => {
         <div className="preview-container">
           <div className="preview-large">
             <div className="preview-image main-preview">
-              <img src="/screenshots/dashboard.png" alt="Main Dashboard" style={{width: '100%', height: 'auto', display: 'block'}} />
-              <div className="image-overlay">
+              <img src="/screenshots/dashboard.png" alt="Main Dashboard" style={{width: '100%', height: 'auto', display: 'block'}} onError={(e) => {
+                e.target.style.display = 'none';
+                e.target.nextSibling.style.display = 'flex';
+              }} />
+              <div className="image-overlay" style={{display: 'flex'}}>
                 <div className="overlay-content">
                   <h2>Experience Professional Audio Analysis</h2>
                   <p>Real-time metrics • AI-powered insights • Beautiful visualizations</p>
