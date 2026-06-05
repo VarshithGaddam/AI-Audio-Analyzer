@@ -6,7 +6,7 @@ import FileUpload from './components/FileUpload';
 import MetricsDisplay from './components/MetricsDisplay';
 import LoadingSpinner from './components/LoadingSpinner';
 
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000';
+const API_URL = process.env.REACT_APP_API_URL || 'https://varshith800-yamee-audio-analyzer.hf.space';
 
 function App() {
   const [analysisData, setAnalysisData] = useState(null);
